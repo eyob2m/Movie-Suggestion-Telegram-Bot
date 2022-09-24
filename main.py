@@ -23,15 +23,7 @@ def boxo(message):
         k = top.find(class_='secondaryInfo')
         w = top.find(class_='weeksColumn')
 
-        print("____________________\n" +" >> " +h.a.text + "  <<\n________________\n This Week : " + m.text.strip() +
-              "\n Total Gross : " + k.text.strip() + "\n Weeks : " +
-              w.text.strip())
-
-        bot.reply_to(
-            message, "___________________________\n"+"  >>  "+ h.a.text + "  << \n________________\n This Week : " +
-            m.text.strip() + "\n Total Gross : " + k.text.strip() +
-            "\n Weeks : " + w.text.strip())
-			  
+     
         bot.send_message(
             channel, "___________________________\n"+"  >>  "+ h.a.text + "  << \n________________\n This Week : " +
             m.text.strip() + "\n Total Gross : " + k.text.strip() +
