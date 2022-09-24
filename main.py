@@ -33,3 +33,4 @@ def boxo(message):
 	
 
 bot.polling()
+schedule.every().sund.at("18:00").do(sudo_placement)
