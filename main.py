@@ -27,7 +27,7 @@ def boxo(message):
        
      
         bot.send_message(
-            channel, "___________________________\n"+n"."+ h.a.text + "  << \n________________\n This Week : " +
+            channel, "___________________________\n"+n+"."+ h.a.text + "  << \n________________\n This Week : " +
             m.text.strip() + "\n Total Gross : " + k.text.strip() +
             "\n Weeks : " + w.text.strip())
 	n+=1
