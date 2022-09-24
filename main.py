@@ -16,7 +16,7 @@ date = soup.find('h4')
 @bot.message_handler(commands=['boxo'])
 
 def boxo(message):
-    bot.send_message(channel,"\U0001F600" + date)	
+    	
     for top in list:
       
 			  
