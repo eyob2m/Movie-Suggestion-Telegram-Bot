@@ -30,6 +30,6 @@ def boxo(message):
             channel, "___________________________\n"+"   >>  "+ h.a.text + "  << \n________________\n This Week : " +
             m.text.strip() + "\n Total Gross : " + k.text.strip() +
             "\n Weeks : " + w.text.strip())
-	n+=1
+	
 
 bot.polling()
