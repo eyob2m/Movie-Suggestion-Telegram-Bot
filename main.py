@@ -12,7 +12,7 @@ soup = BeautifulSoup(url.content, 'html.parser')
 table = soup.find('tbody')
 list = table.find_all('tr')
 date = soup.find('h4')
-bot.send_message(channel,"\U0001F600" + date)
+bot.send_message(channel,date)
 @bot.message_handler(commands=['boxo'])
 
 def boxo(message):
