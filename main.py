@@ -2,6 +2,8 @@ import os
 from bs4 import BeautifulSoup
 import requests
 import telebot
+import schedule
+import time
 
 API_KEY = '5636091834:AAFP1TLallmgSccD-w1v1aJ8ta8jq9n_x_w'
 bot = telebot.TeleBot(API_KEY)
@@ -13,9 +15,9 @@ table = soup.find('tbody')
 list = table.find_all('tr')
 date = soup.find('h4')
 bot.send_message(channel,date)
-@bot.message_handler(commands=['boxo'])
 
-def boxo(message):
+
+def post():
     	
     for top in list:
        
@@ -33,4 +35,8 @@ def boxo(message):
 	
 
 bot.polling()
-schedule.every().sund.at("18:00").do(sudo_placement)
+schedule.every().sundday.at("01:40").do(post)
+while True:
+ 
+    schedule.run_pending()
+    time.sleep(1)
