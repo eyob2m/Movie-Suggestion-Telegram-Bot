@@ -11,7 +11,8 @@ url = requests.get('https://www.imdb.com/chart/boxoffice')
 soup = BeautifulSoup(url.content, 'html.parser')
 table = soup.find('tbody')
 list = table.find_all('tr')
-
+date = soup.find('h4')
+bot.send_message(channel, date)
 @bot.message_handler(commands=['boxo'])
 
 def boxo(message):
@@ -22,7 +23,7 @@ def boxo(message):
         m = top.find('td', class_='ratingColumn')
         k = top.find(class_='secondaryInfo')
         w = top.find(class_='weeksColumn')
-
+       
      
         bot.send_message(
             channel, "___________________________\n"+"  >>  "+ h.a.text + "  << \n________________\n This Week : " +
