@@ -41,8 +41,8 @@ def post():
 	
 
 schedule.every(60).seconds.do(link)
-schedule.every(40).seconds.do(datefun)
-schedule.every(20).seconds.do(post)
+schedule.every(20).seconds.do(datefun)
+schedule.every(40).seconds.do(post)
 while True:
  
     schedule.run_pending()
