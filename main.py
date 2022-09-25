@@ -37,7 +37,7 @@ def post():
         w = top.find(class_='weeksColumn')
        
      
-        bot.send_message(channel, '___________________'+n+'__________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
+        bot.send_message(channel, '______________________________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
 	n+=1
 
 schedule.every(60).seconds.do(link)
