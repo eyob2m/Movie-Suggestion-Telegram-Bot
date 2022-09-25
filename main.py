@@ -14,7 +14,7 @@ soup = BeautifulSoup(url.content, 'html.parser')
 table = soup.find('tbody')
 list = table.find_all('tr')
 date = soup.find('h4')
-n=1
+
 	
 def link():
 	bot.send_message(channel,' \U0001f31a For Updated Information || @BoxOfficeY ||')
@@ -27,7 +27,7 @@ def datefun():
 
 
 def post():
-    	
+    n=1	
     for top in list:
         
 			  
