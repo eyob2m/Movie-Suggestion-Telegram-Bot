@@ -14,13 +14,22 @@ soup = BeautifulSoup(url.content, 'html.parser')
 table = soup.find('tbody')
 list = table.find_all('tr')
 date = soup.find('h4')
-bot.send_message(channel,date)
+
+	
+def link():
+	bot.send_message(channel,' \U0001f31a For Updated Information Join @BoxOfficeY Contact @Eyob2m')
+
+
+
+									 
+def datefun():
+   bot.send_message(channel,'\U0001f530 '+date.text+' \U0001f530 \n \U0001f530 \U0001f530 \U0001f530\U0001f530 \U0001f530 \U0001f530\U0001f530 Join @BoxOfficeY \U0001f530')
 
 
 def post():
     	
     for top in list:
-       
+        
 			  
         h = top.find('td', class_='titleColumn')
         m = top.find('td', class_='ratingColumn')
@@ -28,14 +37,12 @@ def post():
         w = top.find(class_='weeksColumn')
        
      
-        bot.send_message(
-            channel, "___________________________\n"+"   >>  "+ h.a.text + "  << \n________________\n This Week : " +
-            m.text.strip() + "\n Total Gross : " + k.text.strip() +
-            "\n Weeks : " + w.text.strip())
+        bot.send_message(channel, '____________________________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
 	
 
-bot.polling()
-schedule.every().sundday.at("01:40").do(post)
+schedule.every(30).seconds.do(link)
+schedule.every(10).seconds.do(datefun)
+schedule.every(20).seconds.do(post)
 while True:
  
     schedule.run_pending()
