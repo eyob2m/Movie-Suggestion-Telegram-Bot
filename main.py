@@ -17,7 +17,7 @@ date = soup.find('h4')
 
 	
 def link():
-	bot.send_message(channel,' \U0001f31a For Updated Information Join @BoxOfficeY Contact @Eyob2m')
+	bot.send_message(channel,' \U0001f31a For Updated Information || @BoxOfficeY ||')
 
 
 
@@ -40,8 +40,8 @@ def post():
         bot.send_message(channel, '____________________________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
 	
 
-schedule.every(30).seconds.do(link)
-schedule.every(10).seconds.do(datefun)
+schedule.every(60).seconds.do(link)
+schedule.every(40).seconds.do(datefun)
 schedule.every(20).seconds.do(post)
 while True:
  
