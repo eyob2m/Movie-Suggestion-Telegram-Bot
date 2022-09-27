@@ -40,8 +40,8 @@ def post():
         bot.send_message(channel, '______________________________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
 	
 
-schedule.every().tuesday.at("13:57").do(link)
-schedule.every(3).seconds.do(datefun)
+schedule.every().tuesday.at("15:00").do(link)
+schedule.every().tuesday.at("14:55(20)").do(datefun)
 schedule.every().tuesday.at("13:56").do(post)
 while True:
  
