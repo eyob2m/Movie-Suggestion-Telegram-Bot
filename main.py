@@ -23,7 +23,7 @@ def link():
 
 									 
 def datefun():
-   bot.send_message(channel,'__________________________________________\n||  This_Week_Box_Office\n||  '+date.text+'\n||  Join @BoxOfficeY ')
+   bot.send_message(channel,'__________________________________________\n||  Box_Office\n||  '+date.text+'\n||  Join @BoxOfficeY ')
 
 
 def post():
