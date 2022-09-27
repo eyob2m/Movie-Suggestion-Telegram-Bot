@@ -41,7 +41,7 @@ def post():
 	
 
 schedule.every().tuesday.at("13:57").do(link)
-schedule.every().tuesday.at("14:08").do(datefun)
+schedule.every().tuesday.at("14:10").do(datefun)
 schedule.every().tuesday.at("13:56").do(post)
 while True:
  
