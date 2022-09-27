@@ -40,9 +40,9 @@ def post():
         bot.send_message(channel, '______________________________________\n\U0001f3ac Title :   '+ h.a.text + '\n______________________\n\U0001f4b8 This Week : ' + m.text.strip() + '\n\U0001f4b0 Total Gross : ' + k.text.strip() + '\n\U0001f501 Week : ' + w.text.strip())
 	
 
-schedule.every().saturday.at("08:02").do(link)
-schedule.every().saturday.at("08:00").do(datefun)
-schedule.every().saturday.at("08:01").do(post)
+schedule.every().tuesday.at("16:20").do(link)
+schedule.every().tuesday.at("16:18").do(datefun)
+schedule.every().tuesday.at("16:19").do(post)
 while True:
  
     schedule.run_pending()
