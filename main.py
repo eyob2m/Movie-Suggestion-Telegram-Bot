@@ -23,7 +23,7 @@ def link():
 
 									 
 def datefun():
-   bot.send_message(channel,'______________________________________\n##### #This_Week_Box_Office ########  \n\U0001f530 '+date.text+' \U0001f530 \n \U0001f530 \U0001f530 \U0001f530\U0001f530 \U0001f530 \U0001f530\U0001f530 Join @BoxOfficeY \U0001f530')
+   bot.send_message(channel,'______________________________________\n##### #This_Week_Box_Office ########  \n ## '+date.text+'##\n ############### Join @BoxOfficeY ##')
 
 
 def post():
@@ -41,7 +41,7 @@ def post():
 	
 
 schedule.every().tuesday.at("13:57").do(link)
-schedule.every().tuesday.at("14:10").do(datefun)
+schedule.every(30).seconds.do(datefun)
 schedule.every().tuesday.at("13:56").do(post)
 while True:
  
