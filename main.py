@@ -42,7 +42,7 @@ def post():
 
 schedule.every().tuesday.at("15:30:30").do(link)
 schedule.every().tuesday.at("15:30:00").do(datefun)
-schedule.every().tuesday.at("15:30:10").do(post)
+schedule.every().tuesday.at("15:30:05").do(post)
 while True:
  
     schedule.run_pending()
