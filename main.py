@@ -20,14 +20,13 @@ def random():
     urll = requests.get('https://ssnvalidator.net/test/get-movie.php')
 
     sup = urll.json()
-    t= " Title :   "+sup["title"]
-    y=" Year :   "+sup["year"]
-    p =" Plot :   "+sup["description"]
-    g = t+'\n'+y+'\n'+p
-    s = requests.get(sup["image"]).content
-    photo = open("image.png", 'wb')
-    photo.write(s)
-    bot.send_photo(channel,photo, caption=g)
+    t= "#Title :   "+sup["title"]
+    y="#Year :   "+sup["year"]
+    p ="#Plot :   "+sup["description"]
+    g = t+'\n'+y+'\n'+p +'\n @BoxOfficeY'
+    bot.send_photo(channel, sup["image"], caption=g) 
+   
+    
 
 def link():
 	bot.send_message(channel,' \U0001f31a For Updated Information || @BoxOfficeY ||')
@@ -56,7 +55,7 @@ def post():
 schedule.every().tuesday.at("15:30:30").do(link)
 schedule.every().tuesday.at("15:30:00").do(datefun)
 schedule.every().tuesday.at("15:30:05").do(post)
-schedule.every(30).seconds.do(random)
+schedule.every(30).minutes.do(random)
 while True:
  
     schedule.run_pending()
