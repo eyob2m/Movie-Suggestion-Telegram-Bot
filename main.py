@@ -55,7 +55,7 @@ def post():
 schedule.every().tuesday.at("15:30:30").do(link)
 schedule.every().tuesday.at("15:30:00").do(datefun)
 schedule.every().tuesday.at("15:30:05").do(post)
-schedule.every(30).minutes.do(random)
+schedule.every(120).minutes.do(random)
 while True:
  
     schedule.run_pending()
